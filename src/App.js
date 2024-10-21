@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css';
-import landingPagePhoto from '/Users/salonisingh/Desktop/ttretta/ttretta/src/landingpage_photo.png'; // Adjust path as needed
+import landingPagePhoto from '/Users/salonisingh/Desktop/treta/ttretta/src/assets/landingpage_photo.png'; // Adjust path as needed
 
 function App() {
   useEffect(() => {
@@ -94,7 +94,7 @@ const LandingPage = () => {
     <div className="landing">
       <section className="section tagline">
         <div className="tagline-content">
-          <h1>With TTreTTa</h1>
+          <h1>With TTRETTA</h1>
           <div className={`transforming-text ${isVisible ? 'fade-in' : 'fade-out'}`}>
             <h2>{messages[currentMessageIndex]}</h2>
           </div>
