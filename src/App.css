@@ -1,38 +1,191 @@
-.App {
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: black;
+  color: white; /* Fall back for regular text color */
+}
+
+.navbar {
+  position: fixed; /* Fix the navbar to the top */
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+  width: 100%; /* Full width */
+  display: flex;
+  align-items: center; /* Align items vertically centered */
+  background: linear-gradient(to bottom, rgba(42, 40, 40, 0.9), black); /* Gradient from semi-transparent to black */
+  padding: 10px;
+  transition: background-color 0.3s; /* Smooth transition for background color */
+  z-index: 1000; /* Ensure the navbar is above other elements */
+}
+
+.navbar.scrolled {
+  background: linear-gradient(to bottom, rgba(42, 40, 40, 0.5), black); /* More transparent when scrolled */
+}
+
+.navbar a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.dropdown {
+  position: relative;
+  display: inline-block;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.dropbtn {
+  background-color: transparent; /* Make dropdown buttons transparent */
+  border: none; /* Remove border */
+  color: white; /* Text color */
+  padding: 14px 20px; /* Padding to match other links */
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer; /* Change cursor to pointer */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black; /* Change dropdown item text color to black */
+  padding: 12px 16px; /* Add padding for dropdown items */
+  text-decoration: none; /* Remove underline */
+  display: block; /* Ensure items stack vertically */
+}
+
+.dropdown-content a:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Highlight on hover */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: rgba(255, 255, 255, 0.1); /* Highlight on hover */
+}
+
+.section {
+  padding: 20px;
+  margin: 20px;
+  border-radius: 8px;
+  background-color: black; /* Black background for sections */
+}
+
+.tagline {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Space between items */
+  padding: 120px; /* Add padding to the tagline section */
+  height: 100vh; /* Set height to full viewport height */
+  width: 100vw; /* Set width to full viewport width */
+  box-sizing: border-box; /* Include padding in the element's total width/height */
+  background-color: black; /* Set background color to black */
+}
+
+.tagline-content {
+  flex: 1; /* Allow content to take available space */
+  margin-right: 20px; /* Space between text and image */
+  font-size: 42px; /* Increase font size */
+  color: white; /* Set text color to white */
+}
+
+.transforming-text {
+  font-size: 32px; /* Adjust font size */
+  position: relative; /* Required for positioning the animation */
+  opacity: 0; /* Start invisible */
+  animation: fadeInOut infinite; /* Animation for changing text */
+  background: linear-gradient(135deg, #ff0080, #ff8c00); /* Gradient color */
+  -webkit-background-clip: text; /* For WebKit-based browsers */
+  background-clip: text; /* Standard property */
+  color: transparent; /* Make the actual text color transparent */
+}
+
+.fade-in {
+  opacity: 1; /* Fade in effect */
+}
+
+.fade-out {
+  opacity: 0; /* Fade out effect */
+}
+
+.why-ttretta {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: black;
+  min-height: 600px; /* Increase the minimum height of the section */
+  padding: 40px; /* Add padding for spacing */
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.why-ttretta h2 {
+  font-size: 42px;
+  flex: 1;
+  background: linear-gradient(135deg, #d8b4fe, #b19cd9);
+  -webkit-background-clip: text; /* For WebKit-based browsers (Chrome, Safari, etc.) */
+  background-clip: text; /* Standard property */
+  color: transparent; /* Make the actual text color transparent */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.features {
+  min-height: 400px; /* Increase the minimum height of the How Do We Help You? section */
+}
+
+.choose-us {
+  min-height: 400px; /* Increase the minimum height of the Why Choose Us? section */
+}
+
+.faqs {
+  min-height: 400px; /* Increase the minimum height of the FAQs section */
+}
+
+.boxes {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-around; /* Space items evenly */
+  margin-top: 120px; /* Space above the boxes */
+}
+
+.box {
+  flex: 1; /* Equal width for all boxes */
+  display: flex;
+  flex-direction: column; /* Align items vertically */
+  align-items: center; /* Center items horizontally */
+  padding: 20px; /* Add padding */
+  text-align: center; /* Center text */
+  border-radius: 15px; /* Add rounded corners */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+  margin: 10px; /* Add margin for spacing between boxes */
+}
+
+.box:hover {
+  background-color: rgba(255, 255, 255, 0.3); /* Change background to transparent white on hover */
+}
+
+.icon {
+  font-size: 40px; /* Adjust icon size */
+  margin-bottom: 10px; /* Space below icon */
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0); /* Start position */
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    transform: translateY(-20px); /* Move up */
   }
+  100% {
+    transform: translateY(0); /* Return to start position */
+  }
+}
+
+.tagline img {
+  max-width: 370px; /* Set maximum width for the image */
+  height: auto; /* Maintain aspect ratio */
+  animation: float 3s ease-in-out infinite; /* Add animation */
 }
