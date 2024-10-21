@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css';
-import landingPagePhoto from '/Users/salonisingh/Desktop/treta/ttretta/src/assets/landingpage_photo.png'; // Adjust path as needed
+import landingPagePhoto from './assets/landingpage_photo.png';
 
 function App() {
   useEffect(() => {
