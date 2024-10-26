@@ -98,6 +98,9 @@ const LandingPage = () => {
           <div className={`transforming-text ${isVisible ? 'fade-in' : 'fade-out'}`}>
             <h2>{messages[currentMessageIndex]}</h2>
           </div>
+  <button className="cta-button" onClick={() => window.location.href = 'https://start.ttretta.com'}>
+  Get Started
+</button>
         </div>
         <img src={landingPagePhoto} alt="Ttretta" />
       </section>
