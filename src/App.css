@@ -124,6 +124,7 @@ body {
   border-radius: 5px;
   cursor: pointer;
   margin-top: 10px;
+  display: inline-block;
 }
 
 .cta-button:hover {
