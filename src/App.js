@@ -98,13 +98,14 @@ const LandingPage = () => {
           <div className={`transforming-text ${isVisible ? 'fade-in' : 'fade-out'}`}>
             <h2>{messages[currentMessageIndex]}</h2>
           </div>
-          <button className="cta-button" onClick={() => window.location.href = 'https://start.ttretta.com'}>
-            Get Started >>
-          </button>
-          {/* New Technical Analysis button */}
-          <button className="cta-button" onClick={() => window.location.href = '/technical-analysis'}>
-            Technical Analysis >>
-          </button>
+          <div className="button-container">
+            <button className="cta-button" onClick={() => window.location.href = 'https://start.ttretta.com'}>
+              Get Started >>
+            </button>
+            <button className="cta-button" onClick={() => window.location.href = '/technical-analysis'}>
+              Technical Analysis >>
+            </button>
+          </div>
         </div>
         <img src={landingPagePhoto} alt="Ttretta" />
       </section>
