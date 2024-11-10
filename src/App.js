@@ -100,10 +100,10 @@ const LandingPage = () => {
           </div>
           <div className="button-container">
             <button className="cta-button" onClick={() => window.location.href = 'https://start.ttretta.com'}>
-              Get Started >>
+              Today's Recommendations
             </button>
             <button className="cta-button" onClick={() => window.location.href = 'https://technical.ttretta.com'}>
-              Technical Analysis >>
+              Stock Analysis
             </button>
           </div>
         </div>
