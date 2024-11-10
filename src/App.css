@@ -115,20 +115,30 @@ body {
   opacity: 0; /* Fade out effect */
 }
 
+.button-container {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center align buttons */
+    margin-top: 20px; /* Space above the buttons */
+}
+
 .cta-button {
-  padding: 10px 20px;
-  font-size: 1rem;
-  color: white;
-  background-color: #007BFF;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 10px;
-  display: inline-block;
+    display: inline-block;
+    padding: 10px 20px; /* Adjust padding for desired size */
+    margin: 10px 0; /* Space between buttons */
+    font-size: 16px; /* Font size */
+    color: white; /* Text color */
+    background-color: #007bff; /* Button color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-align: center; /* Center text */
+    text-decoration: none; /* No underline */
+    width: 200px; /* Fixed width for consistent sizing */
 }
 
 .cta-button:hover {
-  background-color: #0056b3;
+    background-color: #0056b3; /* Darker shade on hover */
 }
 
 .why-ttretta {
